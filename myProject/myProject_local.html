@@ -10,14 +10,27 @@
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
-		<service-airtable id="service_airtable" tablename="myProject"></service-airtable>
+		<service-airtable id="service_airtable" tablename="EN-01 Final Project"></service-airtable>
 		<service-spike id="service_spike"></service-spike>
 	</div>
 
 	<h1>My Project (Local Interface)</h1>
 
 	<!-- CREATE YOUR PROJECT HERE -->
-
+	<div class="cloud_check">
+		<b><em>Monitor Cloud</em></b>
+		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
+ 			<input type=text id="cloud_name" value="display_text">
+			<input type=text id="cloud_action_val" value=0>
+			<textarea id="cloud_code"> from spike import Primehub
+hub = Primehub()
+my_text = 'REPLACE[cloud_current]'
+hub.light_matrix.write(my_text)
+</textarea>
+			<input type=text id="cloud_reset" value="Enter height here">
+		</div>
+	</div>
+				
 	<hr>
 
 	<h2>My Project Quick Links:</h2>
