@@ -10,7 +10,7 @@
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
-		<service-airtable id="service_airtable" tablename="EN-01 Final Project"></service-airtable>
+		<service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
 	</div>
 
   <h1>My Project (Remote Interface)</h1>
@@ -20,8 +20,14 @@
 
 	<h2>Remote Interface</h2>
 
-	<input type=text cloud_action='update' cloud_name='display_text' value='Enter Height' />
+	<h2>Remote Interface</h2>
 
+  <input type=range cloud_action='update' cloud_name='motor_speed' cloud_min='-100' cloud_max='100' min='-100' max='100' value=0>
+
+  <form cloud_form='input'>
+    <input type=text cloud_action='update' cloud_name='command' value='Run' />
+    <input type=submit />
+  </form>
 
 	<h3>My Project Quick Links:</h3>
   <p>

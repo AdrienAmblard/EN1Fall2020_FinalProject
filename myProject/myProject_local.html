@@ -10,7 +10,7 @@
 
 	<!-- SERVICE DOCK -->
 	<div id="servicedock">
-		<service-airtable id="service_airtable" tablename="EN-01 Final Project"></service-airtable>
+		<service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
 		<service-spike id="service_spike"></service-spike>
 	</div>
 
@@ -18,17 +18,20 @@
 
 	<!-- CREATE YOUR PROJECT HERE -->
 	<div class="cloud_check">
-		<b><em>Monitor Cloud</em></b>
-		<div type="cloud_check" cloud_compare="changes" cloud_action="download_code">
- 			<input type=text id="cloud_name" value="display_text">
-			<input type=text id="cloud_action_val" value=0>
-			<textarea id="cloud_code"> from spike import Primehub
-hub = Primehub()
-my_text = 'REPLACE[cloud_current]'
-hub.light_matrix.write(my_text)
-</textarea>
-			<input type=text id="cloud_reset" value="display_text">
-		</div>
+		<b><em>Monitor Cloud:</em></b>
+
+	  <div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+			<input type=text id="cloud_name" value="command">
+			<input type=text id="cloud_value" value="Run">
+      <input type=text id="cloud_action_val" value="0">
+			<textarea id="cloud_code">from spike import Motor
+# motor connected to A:
+my_motor = Motor('A')
+# replace with speed value from cloud
+my_motor.start(CLOUD[motor_speed])</textarea>
+			<input type=text id="cloud_reset" value="">
+    </div>
+
 	</div>
 
 	<hr>
