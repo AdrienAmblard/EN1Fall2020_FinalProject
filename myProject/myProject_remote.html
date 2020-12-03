@@ -20,13 +20,35 @@
 
 	<h2>Remote Interface</h2>
 
-	<h2>Remote Interface</h2>
 
-  <input type=range cloud_action='update' cloud_name='motor_speed' cloud_min='-100' cloud_max='100' min='-100' max='100' value=0>
+  <!--<input type=range cloud_action='update' cloud_name='motor_speed' cloud_min='-100' cloud_max='100' min='-100' max='100' value=0>-->
 
   <form cloud_form='input'>
-    <input type=text cloud_action='update' cloud_name='command' value='Run' />
+		<p>Set height (0-20):
+	    <input type=range cloud_action='update' cloud_name='platform_height' cloud_min='0' cloud_max='20' min='0' max='20' value='0'>
+	  </p>
+    <input type=text cloud_action='update' cloud_name='platform_height' value='Run' />
     <input type=submit />
+
+		<p>Set angle (degrees, 0-360):
+	    <input type=range cloud_action='update' cloud_name='platform_angle' cloud_min='0' cloud_max='360' min='0' max='360' value='0'>
+	  </p>
+		<input type=text cloud_action='update' cloud_name='platform_angle' value='Run' />
+    <input type=submit />
+
+		<!--<p>Set height (0-20):
+	    <input type=range cloud_action='update' cloud_name='platform_height' cloud_min='0' cloud_max='20' min='0' max='20' value='0'>
+	  </p>
+
+	  <p><button cloud_action='update' cloud_name='command'>Bring to this height!</button></p>
+
+		<p>Set angle (degrees, 0-360):
+	    <input type=range cloud_action='update' cloud_name='platform_angle' cloud_min='0' cloud_max='360' min='0' max='360' value='0'>
+	  </p>
+
+	  <p><button cloud_action='update' cloud_name='command'>Bring to this angle!</button></p>-->
+
+
   </form>
 
 	<h3>My Project Quick Links:</h3>
