@@ -21,20 +21,20 @@
 		<b><em>Monitor Cloud:</em></b>
 
 	  <div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
-			<input type=text id="cloud_name" value="platform_height">
+			<input type=text id="cloud_name" value="platform_height_command">
 			<input type=text id="cloud_value" value="Run">
       <input type=text id="cloud_action_val" value="1">
 			<textarea id="cloud_code">from spike import Motor
 # motor connected to A:
 motors = MotorPair('E','F')
 hub = PrimeHub()
-my_text = 'REPLACE[cloud_current]'
+my_text = 'REPLACE[cloud_platform_height]'
 hub.light_matrix.write(my_text)
 # replace with speed value from cloud
 motors.start_tank(CLOUD[platform_height],CLOUD[platform_height])
 wait_for_seconds(2)
 motors.stop()
-motors.start_tank(-1*CLOUD[platform_height],-1*CLOUD[platform_height)
+motors.start_tank(-1*CLOUD[platform_height],-1*CLOUD[platform_height])
 wait_for_seconds(2)
 motors.stop()
 </textarea>
