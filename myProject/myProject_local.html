@@ -48,9 +48,12 @@ motors.stop()
 	 	 <input type=text id="cloud_action_val" value="2">
 	 	 <textarea id="cloud_code">from spike import Motor
 # motor connected to A:
-my_motor = Motor('A')
+my_motor = Motor('E')
 # replace with speed value from cloud
-my_motor.start(CLOUD[platform_angle])</textarea>
+my_motor.start(CLOUD[platform_angle])
+wait_for_seconds(2)
+my_motor.stop()
+</textarea>
 	 	 <input type=text id="cloud_reset" value="">
 	  </div>
 	</div>
