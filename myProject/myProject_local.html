@@ -66,9 +66,8 @@ motors.stop()
 				<input type=text id="cloud_value" value="Reset">
 				<input type=text id="cloud_action_val" value="4">
 				<textarea id="cloud_code">from spike import Motor, MotorPair, PrimeHub
-	 from spike.control import wait_for_seconds
-	 motor = Motor('E')
-	 motor.run_to_degrees_counted(CLOUD[platform_angle], -20)
+motor = Motor('E')
+motor.run_to_degrees_counted(CLOUD[platform_angle], -20)
 </textarea>
 		<input type=text id="cloud_reset" value="">
 		</div>
