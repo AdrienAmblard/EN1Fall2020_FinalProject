@@ -26,16 +26,8 @@
       <input type=text id="cloud_action_val" value="1">
 			<textarea id="cloud_code">from spike import Motor, MotorPair, PrimeHub
 from spike.control import wait_for_seconds
-# motor connected to A:
 motors = MotorPair('E','F')
-hub = PrimeHub()
-my_text = 'CLOUD[cloud_platform_height]'
-hub.light_matrix.write(my_text)
-# replace with speed value from cloud
 motors.start_tank(20,20)
-wait_for_seconds(0.1*CLOUD[platform_height])
-motors.stop()
-motors.start_tank(-20,-20)
 wait_for_seconds(0.1*CLOUD[platform_height])
 motors.stop()
 </textarea>
@@ -49,7 +41,7 @@ motors.stop()
 	 	 <textarea id="cloud_code">from spike import Motor, MotorPair, PrimeHub
 from spike.control import wait_for_seconds
 motor = Motor('E')
-motor.run_to_degrees_counted(CLOUD[platform_angle], 20)
+motor.run_to_degrees_counted(-1*CLOUD[platform_angle], -20)
 </textarea>
 	 	 <input type=text id="cloud_reset" value="">
 	  </div>
@@ -65,6 +57,18 @@ hub = PrimeHub()
 motors.start_tank(-20,-20)
 wait_for_seconds(0.1*CLOUD[platform_height])
 motors.stop()
+</textarea>
+		<input type=text id="cloud_reset" value="">
+		</div>
+
+		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
+				<input type=text id="cloud_name" value="reset_angle">
+				<input type=text id="cloud_value" value="Reset">
+				<input type=text id="cloud_action_val" value="4">
+				<textarea id="cloud_code">from spike import Motor, MotorPair, PrimeHub
+	 from spike.control import wait_for_seconds
+	 motor = Motor('E')
+	 motor.run_to_degrees_counted(CLOUD[platform_angle], -20)
 </textarea>
 		<input type=text id="cloud_reset" value="">
 		</div>
