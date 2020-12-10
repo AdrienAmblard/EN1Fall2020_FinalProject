@@ -13,11 +13,11 @@ https://www.w3schools.com/css/default.asp
   float: right;
 }
 
-body{
+.body {
   background-color: lightblue;
 }
 
-h1{
+.h1 {
   color: blue;
 }
 
