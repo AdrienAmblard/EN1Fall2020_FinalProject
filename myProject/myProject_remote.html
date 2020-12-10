@@ -1,5 +1,5 @@
 <html>
-	<title>My Project (Remote)</title>
+	<title>Get Jumbo Home!</title>
 	<head>
 		<script src="https://cdn.jsdelivr.net/gh/tuftsceeo/SPIKE-Web-Interface/cdn/ServiceDock.js" charset="utf-8"></script>
 	  <script src="../src/secret.js" charset="utf-8"></script>
@@ -32,13 +32,17 @@
 		<button cloud_action='update' cloud_name='reset_height'>Reset</button>
   	</p>
 
-		<p>Set angle (degrees, 0-360):
-	    <input type=range cloud_action='update' cloud_name='platform_angle' cloud_min='0' cloud_max='360' min='0' max='360' value='0'>
+		<p>Set angle:
+	    <input type=range cloud_action='update' cloud_name='platform_angle' cloud_min='0' cloud_max='180' min='0' max='180' value='0'>
 	  </p>
 		<button cloud_action='update' cloud_name='platform_angle_command'>Run</button>
 
 		<p>Reset angle:
 		<button cloud_action='update' cloud_name='reset_angle'>Reset</button>
+  	</p>
+
+		<p>Reset both height and angle:
+		<button cloud_action='update' cloud_name='reset_both'>Reset</button>
   	</p>
 
 		<!--<p>Set height (0-20):
