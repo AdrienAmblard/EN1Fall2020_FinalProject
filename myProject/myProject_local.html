@@ -20,6 +20,8 @@
 	<div class="cloud_check">
 		<b><em>Monitor Cloud:</em></b>
 
+<!-- HEIGHT CONTROL SYSTEM -->
+
 	  <div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 			<input type=text id="cloud_name" value="platform_height_command">
 			<input type=text id="cloud_value" value="Run">
@@ -34,6 +36,8 @@ motors.stop()
 			<input type=text id="cloud_reset" value="">
     </div>
 
+<!-- ANGLE CONTROL SYSTEM-->
+
 		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 	 	 <input type=text id="cloud_name" value="platform_angle_command">
 	 	 <input type=text id="cloud_value" value="Run">
@@ -45,6 +49,8 @@ motor.run_to_degrees_counted(-1*CLOUD[platform_angle], -20)
 </textarea>
 	 	 <input type=text id="cloud_reset" value="">
 	  </div>
+
+<!-- HEIGHT RESET BUTTON -->
 
 		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 		    <input type=text id="cloud_name" value="reset_height">
@@ -61,6 +67,8 @@ motors.stop()
 		<input type=text id="cloud_reset" value="">
 		</div>
 
+	<!-- ANGLE RESET BUTTON -->
+
 		<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
 				<input type=text id="cloud_name" value="reset_angle">
 				<input type=text id="cloud_value" value="Reset">
@@ -72,20 +80,22 @@ motor.run_to_degrees_counted(CLOUD[platform_angle], -20)
 		<input type=text id="cloud_reset" value="">
 		</div>
 
+<!-- HEIGHT AND ANGLE RESET BUTTON -->
+
 			<div type="cloud_check" cloud_compare="equal" cloud_action="download_code">
-			 <input type=text id="cloud_name" value="platform_angle_command">
+			 <input type=text id="cloud_name" value="reset_both">
 			 <input type=text id="cloud_value" value="Run">
 			 <input type=text id="cloud_action_val" value="5">
 			 <textarea id="cloud_code">from spike import Motor, MotorPair, PrimeHub
 from spike.control import wait_for_seconds
+motor = Motor('E')
+motor.run_to_degrees_counted(-1*CLOUD[platform_angle], -20)
 motors = MotorPair('E','F')
 hub = PrimeHub()
 motors.start_tank(-20,-20)
 wait_for_seconds(0.1*CLOUD[platform_height])
 motors.stop()
 
-	motor = Motor('E')
-	motor.run_to_degrees_counted(-1*CLOUD[platform_angle], -20)
 	</textarea>
 			 <input type=text id="cloud_reset" value="">
 			</div>

@@ -13,33 +13,43 @@
 		<service-airtable id="service_airtable" tablename="finalProject"></service-airtable>
 	</div>
 
-  <h1>My Project (Remote Interface)</h1>
+  <h1>Get Jumbo Home!</h1>
 
 	<!-- CREATE YOUR PROJECT HERE -->
 
 
-	<h2>Remote Interface</h2>
+	<h2>Get Jumbo Home!</h2>
 
 
   <!--<input type=range cloud_action='update' cloud_name='motor_speed' cloud_min='-100' cloud_max='100' min='-100' max='100' value=0>-->
+
+	<!-- HEIGHT CONTROL SYSTEM -->
 
 		<p>Set height:
 	    <input type=range cloud_action='update' cloud_name='platform_height' cloud_min='0' cloud_max='30' min='0' max='30' value='0'>
 	  </p>
     <button cloud_action='update' cloud_name='platform_height_command'>Run</button>
 
+<!-- HEIGHT RESET BUTTON-->
+
 		<p>Reset height:
 		<button cloud_action='update' cloud_name='reset_height'>Reset</button>
   	</p>
+
+<!-- ANGLE CONTROL SYSTEM -->
 
 		<p>Set angle:
 	    <input type=range cloud_action='update' cloud_name='platform_angle' cloud_min='0' cloud_max='180' min='0' max='180' value='0'>
 	  </p>
 		<button cloud_action='update' cloud_name='platform_angle_command'>Run</button>
 
+<!-- ANGLE RESET BUTTON-->
+
 		<p>Reset angle:
 		<button cloud_action='update' cloud_name='reset_angle'>Reset</button>
   	</p>
+
+<!-- HEIGHT AND ANGLE REST BUTTON -->
 
 		<p>Reset both height and angle:
 		<button cloud_action='update' cloud_name='reset_both'>Reset</button>
